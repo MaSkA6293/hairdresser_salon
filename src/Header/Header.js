@@ -1,4 +1,5 @@
-import React, { Component } from 'react'; import './header.css';
+import React, { Component } from 'react';
+import './header.css';
 import ok from '../Header/img/ok.png';
 import vk from '../Header/img/vk.png';
 import inst from '../Header/img/inst.png';
