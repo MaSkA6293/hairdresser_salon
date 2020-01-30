@@ -22,7 +22,7 @@ class Nav extends Component {
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="Ubojnoe_predlozhenie.php" title="Акции">Акцииbbbbbbbbbbbb</a>
+                            <a className="nav-link" href="Ubojnoe_predlozhenie.php" title="Акции">Акции</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="vacansii.php" title="Вакансии">Вакансии</a>

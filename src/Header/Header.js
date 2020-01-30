@@ -11,6 +11,22 @@ import { faClock } from '@fortawesome/free-solid-svg-icons';
 const phone = <FontAwesomeIcon icon={faPhone} />
 const clock = <FontAwesomeIcon icon={faClock} />
 class Header extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            show: 'show'
+        }
+    }
+    write = () => {
+        if (this.state.show === 'show') {
+            this.setState({ show: 'hide' });
+        }
+        else {
+            this.setState({ show: 'show' });
+        }
+
+    }
+
     render() {
         return (
             <div>
@@ -43,7 +59,8 @@ class Header extends Component {
                              </div>
                         <div className="Block_3 col-12 col-md-12 col-lg-4 col-lg-4">
                             <img src={map} alt='' />Рыбное,<br /> Крымская 13<br />
-                            <button id="zapisatsya" type="button" className="btn btn-success">Записаться</button>
+                            <button id="zapisatsya" type="button" className="btn btn-success" onClick={this.write} >Записаться</button>
+                            {this.state.show}
                         </div>
                     </div>
                 </div>
