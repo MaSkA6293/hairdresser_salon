@@ -1,0 +1,85 @@
+.fa-map-marker{
+    color:  #A86082;
+}
+.container {
+    width: 100%;
+}
+header {
+    width:100%;
+    padding-bottom: 1px;
+   }
+
+.Golova{
+    background-color:#A86082;
+}
+.menu {
+    color:white;
+    float: left;
+    font-size: 1.5em;
+    padding-top: 10px;
+
+}
+.menu a  {
+    color:white;
+    text-decoration:none;
+
+}
+.menu a:hover {
+    color:red;
+}
+.imagessylki{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.imagessylki img{
+    width:40px;
+    margin-left: 2%;
+}
+
+
+.Block_1 {
+    padding-top: 20px;
+    text-align: center;
+ }
+.Block_1 img {
+    width: 300px;
+}
+.Block_2 {
+    float: left;
+    font-size: 1.6em;
+     margin: 3% auto;
+    text-align: center;
+}
+
+.Block_3 {
+    float: right;
+    font-size: 1.6em;
+   text-align: center;
+     margin-top: 2%;
+}
+.Block_3 img{
+    width:40px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+}
+#zapisatsya {
+    width: 60%;
+    margin-top: 4%;
+    font-size: 0.8em;
+}
+/*Адаптивный header*/
+    @media screen and (max-width: 767.5px) {
+    .menu {
+        text-align: center;
+        font-size: 1.2em;
+        padding: 0;
+    }
+        .Block_2 {
+            margin-top: 20px;
+        }
+}
+
+
+/*Стили кнопки записаться*/
