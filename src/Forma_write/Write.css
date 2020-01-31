@@ -4,7 +4,7 @@
     position: absolute;
     display: block;
     top: 30px;
-    left: auto;
+    margin: auto;
     background-color: #f1f0f1;
     padding: 10px;
     font-size: 0.8em;

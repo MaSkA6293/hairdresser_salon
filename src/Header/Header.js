@@ -1,32 +1,17 @@
 import React, { Component } from 'react';
 import './header.css';
-import ok from '../Header/img/ok.png';
-import vk from '../Header/img/vk.png';
-import inst from '../Header/img/inst.png';
-import elena from '../Header/img/elena.png';
-import map from '../Header/img/map.png';
+import ok from './img/ok.png';
+import vk from './img/vk.png';
+import inst from './img/inst.png';
+import elena from './img/elena.png';
+import map from './img/map.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
+
 const phone = <FontAwesomeIcon icon={faPhone} />
 const clock = <FontAwesomeIcon icon={faClock} />
 class Header extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            show: 'show'
-        }
-    }
-    write = () => {
-        if (this.state.show === 'show') {
-            this.setState({ show: 'hide' });
-        }
-        else {
-            this.setState({ show: 'show' });
-        }
-
-    }
-
     render() {
         return (
             <div>
@@ -59,8 +44,7 @@ class Header extends Component {
                              </div>
                         <div className="Block_3 col-12 col-md-12 col-lg-4 col-lg-4">
                             <img src={map} alt='' />Рыбное,<br /> Крымская 13<br />
-                            <button id="zapisatsya" type="button" className="btn btn-success" onClick={this.write} >Записаться</button>
-                            {this.state.show}
+                            <button id="zapisatsya" type="button" className="btn btn-success" onClick={this.props.openForm}  >Записаться</button>
                         </div>
                     </div>
                 </div>

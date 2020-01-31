@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import './Write.css';
 class Write extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            showform: 'block',
+        }
+    }
     handleChange = (e) => {
         console.log(e.target);
     }
@@ -8,9 +14,12 @@ class Write extends Component {
         console.log(e.target);
     }
     render() {
+        let style = {
+            display: this.props.stateform,
+        };
         return (
             <div>
-                <div className="modal-wrapper">
+                < div className="modal-wrapper" style={style} >
                     <div className="zapis col-10 col-sm-7 col-md-5 col-lg-5">
                         <form id="form_zapis">
                             <button id="closeform" type="button" className="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -56,8 +65,8 @@ class Write extends Component {
                             <input id="Otpravit" type="submit" className="btn btn-primary" defaultValue='Send' />
                         </form>
                     </div>
-                    <div className="overlay"></div>
-                </div>
+                    <div className="overlay" onClick={this.props.closeWindow}></div>
+                </div >
                 <div className="modal_ok">
                     <div className="message_ok" >
                         <div id="message_text">Форма успешно отправлена<br />В ближайшее время<br />мы свяжемся с вами!</div><br />
@@ -66,7 +75,7 @@ class Write extends Component {
                 </div>
 
 
-            </div>
+            </div >
 
 
         )

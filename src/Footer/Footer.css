@@ -1,0 +1,66 @@
+h4{
+    text-align: center;
+    color: #791a68ed;
+}
+
+.footer {
+    padding-top: 30px;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.contakty_foot {
+    text-align: center;
+    float: left;
+    font-size: 1.3m;
+}
+
+.imagessylki_footer img{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.list-group {
+
+    text-align: center    ;
+}
+.list-group-item{
+padding: 5px;
+
+}
+.foot_menu ul li a{
+text-decoration: none;
+    color: black;
+    margin-left: 3%;
+
+}
+.foot_menu ul li a:hover{
+color: red;
+}
+
+
+.final {
+    text-align: center;
+    background-color: #A86082;
+    color: white;
+}
+.final a {
+    color: white;
+    text-decoration: none;
+}
+.final a:hover {
+    color: red;
+}
+
+.yandex_map {
+    margin: 0 auto;
+    float: left;
+    margin-bottom: 20px;
+    width: 400px;
+}
+#redletter{
+    color: red;
+}
