@@ -33,7 +33,7 @@ class Footer extends Component {
                             <h4>Меню</h4>
                             <ul className="list-group list-group-flush">
                                 <li className="list-group-item"><a href="index.php" title="Главная страница">Главная</a> </li>
-                                <li className="list-group-item"><a href="nash_interjer.php" title="Интерьер">Наш интерьер</a></li>
+                                <li className="list-group-item"><a href="/Interjer" title="Интерьер">Наш интерьер</a></li>
                                 <li className="list-group-item"><a href="nashi_raboty.php" title="Наши работы">Наши работы</a></li>
                                 <li className="list-group-item"><a href="Ubojnoe_predlozhenie.php" title="Акции">Акции</a></li>
                                 <li className="list-group-item"><a href="vacansii.php" title="Вакансии">Вакансии</a></li>

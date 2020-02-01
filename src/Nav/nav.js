@@ -20,7 +20,7 @@ class Nav extends Component {
                     </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <a className="dropdown-item" href="nashi_raboty.php" title="Наши работы">Наши работы</a>
-                                <a className="dropdown-item" href="nash_interjer.php" title="Наш интерьер">Наш интерьер</a>
+                                <a className="dropdown-item" href="/Interjer" title="Наш интерьер">Наш интерьер</a>
                             </div>
                         </li>
                         <li className="nav-item">
