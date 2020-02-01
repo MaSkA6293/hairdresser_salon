@@ -4,10 +4,12 @@ import './App.css';
 import Header from './Header/Header';
 import Nav from './Nav/nav';
 import Write from './Forma_write/Write';
-import Uslugi from './Uslugi/Uslugi';
-import OurPartner from './OurPartner/OurPartner';
-import PopulyarUslugi from './PopulyarUslugi/PopulyarUslugi';
 import Footer from './Footer/Footer';
+import Page404 from './Page404/404';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FirsPage from './FirstPage/FirstPage';
+import Jobs from './Jobs/Jobs';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -24,14 +26,24 @@ class App extends Component {
   }
   render() {
     return (
+
       <div className="Head">
         <Header openForm={this.openForm} />
         <Nav />
-        <Uslugi />
-        <PopulyarUslugi />
-        <OurPartner />
+        <Router>
+          <Switch>
+            <Route exact path="/" component={FirsPage} />
+            <Route exact path="/Jobs" component={Jobs} />
+            <Route component={Page404} />
+          </Switch>
+        </Router>
+
+
+
         <Footer />
         <Write closeWindow={this.closeWindow} stateform={this.state.showform} />
+
+
       </div>
     )
   }

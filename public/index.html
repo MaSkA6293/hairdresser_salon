@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -20,6 +20,10 @@
 
 <body>
   <div id="root"></div>
+
+
+
+
   <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -30,6 +34,28 @@
       To begin the development, run `npm start`.
       To create a production bundle, use `npm run build`.
     -->
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyB5ib0U46we7O_LOBwKrtta67Duqg2o0WM",
+      authDomain: "elenaonreact.firebaseapp.com",
+      databaseURL: "https://elenaonreact.firebaseio.com",
+      projectId: "elenaonreact",
+      storageBucket: "elenaonreact.appspot.com",
+      messagingSenderId: "647768514143",
+      appId: "1:647768514143:web:d50e47274e4eb8e0eb85ea"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+span{
+    font-weight: bold;
+}
+#professiya{
+    text-align: left;
+    color: #791a68ed;
+    font-size: 1.5em;
+}
+.vacansii {
+    font-size: 1.2em;
+    text-align: left;
+    margin-left: 5%;
+    line-height: 2em;
+}
+#telefon {
+    width: 20px;
+}

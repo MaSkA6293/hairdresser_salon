@@ -55,12 +55,7 @@ color: red;
     color: red;
 }
 
-.yandex_map {
-    margin: 0 auto;
-    float: left;
-    margin-bottom: 20px;
-    width: 400px;
-}
-#redletter{
-    color: red;
+
+#Blueletter{
+    color: blue;
 }

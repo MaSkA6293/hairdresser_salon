@@ -1,18 +1,48 @@
 import React, { Component } from 'react';
 import './Write.css';
+import validator from 'validator';
 class Write extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            errorphonenumber: '',
+            phonenumber: '',
             showform: 'block',
+            timevalue: '09:00',
         }
     }
     handleChange = (e) => {
         console.log(e.target);
+        this.setState({ timevalue: e.target.value });
     }
     handleChangeTextArea = (e) => {
         console.log(e.target);
     }
+    handlePhone2 = (e) => {
+        let val = e.target.value;
+        console.log(val);
+
+        if (validator.isMobilePhone(val, ['ru-RU'])) {
+            // Изменил state
+            this.setState({
+                isValidPhone: true,
+                errorphonenumber: ''
+            });
+        } else {
+            this.setState({ errorphonenumber: 'Телефон в формате 8 900 300 20 20' })
+        }
+    }
+
+
+
+    handlePhone = (e) => {
+
+        if (!/\d/.test(e.key)) {
+            e.preventDefault();
+        }
+    }
+
+
     render() {
         let style = {
             display: this.props.stateform,
@@ -33,8 +63,8 @@ class Write extends Component {
                                 </div>
                                 <div className="form-group   col-sm-12  ">
                                     <label htmlFor='phone'>Ваш телефон:</label>
-                                    <input type="tel" className="form-control" id="phone" placeholder="Телефон для связи" maxLength="12" name="telefon" />
-                                    <div className="error-box"></div>
+                                    <input type="tel" className="form-control" id="phone" placeholder="8 (900) 637 22 33" defaultValue={this.state.phonenumber} maxLength="11" name="telefon" onKeyPress={this.handlePhone} onInput={this.handlePhone2} />
+                                    <div className="error-box">{this.state.errorphonenumber}</div>
                                 </div>
 
                                 <div className="form-group col-sm-12">
@@ -43,7 +73,7 @@ class Write extends Component {
                                 </div>
                                 <div className="form-group col-sm-12 ">
                                     <label htmlFor='time'>Желаемое время</label>
-                                    <select id="time" className="form-control" size="1" name="time" value='09:00' onChange={this.handleChange}>
+                                    <select id="time" className="form-control" size="1" name="time" value={this.state.timevalue} onChange={this.handleChange}>
                                         <option value="09:00">09:00</option>
                                         <option value="10:00">10:00</option>
                                         <option value="11:00">11:00</option>

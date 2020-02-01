@@ -35,12 +35,12 @@ class Header extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="Block_1 col-12 col-md-6 col-lg-4">
-                            <a href="index.php" > <img src={elena} alt='' className="img-fluid" /> </a>
+                            <a href="/" > <img src={elena} alt='' className="img-fluid" /> </a>
                         </div>
                         <div className="Block_2 col-12 col-md-6 col-lg-4">
-                            <i className="fa fa-phone" aria-hidden="true">{phone}</i>+7 (952) 126 15 27<br />
-                            <i className="fa fa-phone" aria-hidden="true">{phone}</i>+7 (920) 631 31 41<br />
-                            <i className="fa fa-clock-o" aria-hidden="true"></i>{clock}ПН-ВС 09:00-18:00
+                            <i >{phone}</i>+7 (952) 126 15 27<br />
+                            <i >{phone}</i>+7 (920) 631 31 41<br />
+                            <i ></i>{clock}ПН-ВС 09:00-18:00
                              </div>
                         <div className="Block_3 col-12 col-md-12 col-lg-4 col-lg-4">
                             <img src={map} alt='' />Рыбное,<br /> Крымская 13<br />

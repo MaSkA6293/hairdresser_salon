@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './nav.css';
+
+
 class Nav extends Component {
     render() {
         return (
@@ -25,13 +27,14 @@ class Nav extends Component {
                             <a className="nav-link" href="Ubojnoe_predlozhenie.php" title="Акции">Акции</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="vacansii.php" title="Вакансии">Вакансии</a>
+                            <a className="nav-link" href="/Jobs" title="Вакансии">Вакансии</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="Price.php" title="Услуги и цены">Услуги и цены</a>
                         </li>
                     </ul>
                 </div>
+
             </nav>
         )
     }
