@@ -11,6 +11,7 @@ import FirsPage from './FirstPage/FirstPage';
 import Jobs from './Jobs/Jobs';
 import PageInterjer from './PageInterjer/PageInterjer';
 import Pageourwork from './Pageourwork/Ourwork';
+import Pageouraction from './Pageouraction/Action';
 class App extends Component {
   constructor(props) {
     super(props)
@@ -37,6 +38,7 @@ class App extends Component {
             <Route exact path="/Jobs" component={Jobs} />
             <Route exact path="/Interjer" component={PageInterjer} />
             <Route exact path="/Ourwork" component={Pageourwork} />
+            <Route exact path="/Ouraction" component={Pageouraction} />
             <Route component={Page404} />
           </Switch>
         </Router>

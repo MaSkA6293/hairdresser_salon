@@ -35,18 +35,18 @@ class Footer extends Component {
                                 <li className="list-group-item"><a href="/" title="Главная страница">Главная</a> </li>
                                 <li className="list-group-item"><a href="/Interjer" title="Интерьер">Наш интерьер</a></li>
                                 <li className="list-group-item"><a href="/Ourwork" title="Наши работы">Наши работы</a></li>
-                                <li className="list-group-item"><a href="Ubojnoe_predlozhenie.php" title="Акции">Акции</a></li>
+                                <li className="list-group-item"><a href="/Ouraction" title="Акции">Акции</a></li>
                                 <li className="list-group-item"><a href="/Jobs" title="Вакансии">Вакансии</a></li>
                             </ul>
                         </div>
                         <div className="clearfix"></div>
-                        <div className="yandex_map  col-md-12 col-lg-4" >
+                        <div className="col-md-12 col-lg-4" >
                             <h4>Мы на <span id="Blueletter">G</span>oogle карте</h4>
                             <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5479.803019726746!2d39.49748573575251!3d54.72768345477561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4149ff4adb120fd7%3A0xabb56f335e04a841!2z0KHQsNC70L7QvSDQutGA0LDRgdC-0YLRiyDQldC70LXQvdCw!5e0!3m2!1sru!2sru!4v1580551379766!5m2!1sru!2sru"
                                 width="450px"
                                 height="300px"
                                 id="myId"
-                                className="myClassname"
+                                className="Gmap"
                                 display="initial"
                                 position="relative" />
 
