@@ -32,11 +32,11 @@ class Footer extends Component {
                         <div className="foot_menu  col-md-7 col-lg-3" >
                             <h4>Меню</h4>
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item"><a href="index.php" title="Главная страница">Главная</a> </li>
+                                <li className="list-group-item"><a href="/" title="Главная страница">Главная</a> </li>
                                 <li className="list-group-item"><a href="/Interjer" title="Интерьер">Наш интерьер</a></li>
-                                <li className="list-group-item"><a href="nashi_raboty.php" title="Наши работы">Наши работы</a></li>
+                                <li className="list-group-item"><a href="/Ourwork" title="Наши работы">Наши работы</a></li>
                                 <li className="list-group-item"><a href="Ubojnoe_predlozhenie.php" title="Акции">Акции</a></li>
-                                <li className="list-group-item"><a href="vacansii.php" title="Вакансии">Вакансии</a></li>
+                                <li className="list-group-item"><a href="/Jobs" title="Вакансии">Вакансии</a></li>
                             </ul>
                         </div>
                         <div className="clearfix"></div>

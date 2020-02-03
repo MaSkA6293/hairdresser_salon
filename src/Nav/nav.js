@@ -12,14 +12,14 @@ class Nav extends Component {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <a className="nav-link" href="index.php" title="Главная">Главная <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="/" title="Главная">Главная <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="О салоне">
                                 О салоне
                     </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a className="dropdown-item" href="nashi_raboty.php" title="Наши работы">Наши работы</a>
+                                <a className="dropdown-item" href="/Ourwork" title="Наши работы">Наши работы</a>
                                 <a className="dropdown-item" href="/Interjer" title="Наш интерьер">Наш интерьер</a>
                             </div>
                         </li>

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import './PageInterjer.css';
+import './Ourwork.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import i1 from './img/interjer_1.png';
-import i2 from './img/interjer_2.png';
-import i3 from './img/interjer_3.png';
-import i4 from './img/interjer_4.png';
-import i5 from './img/interjer_5.png';
-import i6 from './img/interjer_6.png';
-import i7 from './img/interjer_7.png';
-import i8 from './img/interjer_8.png';
-import i9 from './img/interjer_9.png';
+import i1 from './img/2_1.png';
+import i2 from './img/2_2.png';
+import i3 from './img/2_3.png';
+import i4 from './img/3_1.png';
+import i5 from './img/3_2.png';
+import i6 from './img/3_3.png';
+import i7 from './img/4_1.png';
+import i8 from './img/5_1.png';
+import i9 from './img/5_2.png';
 
-class PageInterjer extends Component {
+class Pageourwork extends Component {
     render() {
         var settings = {
             infinite: true,
@@ -33,8 +33,8 @@ class PageInterjer extends Component {
         };
         return (
             <div className="slider">
-                < Slider {...settings}>
-                    <div>
+                <Slider {...settings}>
+                    <div className="slider">
                         <img className="img-responsive" src={i1} alt="our interjer" />
                     </div>
                     <div>
@@ -43,30 +43,29 @@ class PageInterjer extends Component {
                     <div>
                         <img className="img-responsive" src={i3} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i4} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i5} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i6} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i7} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i8} alt="our interjer" />
                     </div>
-                    <div>
+                    <div >
                         <img className="img-responsive" src={i9} alt="our interjer" />
                     </div>
-
-                </Slider >
-            </div >
+                </Slider>
+            </div>
 
         )
     }
 }
 
-export default PageInterjer;
+export default Pageourwork;

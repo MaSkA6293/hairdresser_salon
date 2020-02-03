@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FirsPage from './FirstPage/FirstPage';
 import Jobs from './Jobs/Jobs';
 import PageInterjer from './PageInterjer/PageInterjer';
+import Pageourwork from './Pageourwork/Ourwork';
 class App extends Component {
   constructor(props) {
     super(props)
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     return (
 
-      <div className="Head">
+      <div className="Head contaner">
         <Header openForm={this.openForm} />
         <Nav />
         <Router>
@@ -35,6 +36,7 @@ class App extends Component {
             <Route exact path="/" component={FirsPage} />
             <Route exact path="/Jobs" component={Jobs} />
             <Route exact path="/Interjer" component={PageInterjer} />
+            <Route exact path="/Ourwork" component={Pageourwork} />
             <Route component={Page404} />
           </Switch>
         </Router>
