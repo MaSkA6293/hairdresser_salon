@@ -16,11 +16,11 @@ class Write extends Component {
         this.setState({ timevalue: e.target.value });
     }
     handleChangeTextArea = (e) => {
-        console.log(e.target);
+
     }
     handlePhone2 = (e) => {
         let val = e.target.value;
-        console.log(val);
+
 
         if (validator.isMobilePhone(val, ['ru-RU'])) {
             // Изменил state
@@ -49,10 +49,10 @@ class Write extends Component {
         };
         return (
             <div>
-                < div className="modal-wrapper" style={style} >
+                <div className="modal-wrapper" style={style} >
                     <div className="zapis col-10 col-sm-7 col-md-5 col-lg-5">
                         <form id="form_zapis">
-                            <button id="closeform" type="button" className="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button id="closeform" type="button" className="close" aria-label="Close" onClick={this.props.closeWindow}><span aria-hidden="true">&times;</span></button>
                             <div id="zayavka_zagolovok"> Данная форма является ЗАЯВКОЙ </div>
                             <span id="zagolovok2">Для подтверждения факта записи <br />мы Вам обязательно перезвоним!</span>
                             <div className="form-row">
@@ -87,7 +87,7 @@ class Write extends Component {
                                 </div>
                                 <div className="form-group col-sm-12">
                                     <label htmlFor='uslugi'>Какие услуги вас интересуют</label>
-                                    <textarea value='message' onChange={this.handleChangeTextArea} />
+                                    <textarea id='areatext' className="form-control" rows="3" onChange={this.handleChangeTextArea} />
 
                                     <div className="error-box"></div>
                                 </div>

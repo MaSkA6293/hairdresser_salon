@@ -1,4 +1,7 @@
-
+#areatext {
+    width: 90%;
+    margin: auto;
+}
 
 .zapis {
     position: absolute;
@@ -42,6 +45,7 @@
 
 .modal-wrapper {
     position:absolute;
+    text-align: center;
     left:0;
     top:0;
     display:none;
