@@ -9,39 +9,64 @@ class Write extends Component {
             phonenumber: '',
             showform: 'block',
             timevalue: '09:00',
+            error: true,
         }
     }
+    // handler time write
     handleChange = (e) => {
-        console.log(e.target);
         this.setState({ timevalue: e.target.value });
     }
-    handleChangeTextArea = (e) => {
+    //handler name 2
+    handleName2 = (e) => {
 
+        console.log(e);
+        console.log(e.keyCode);
     }
+    //handler name
+    handleCheckname = (e) => {
+        let name = e.target.value;
+        if (!name) {
+            this.setState({ errorname: 'Введите ваше имя' });
+            this.setState({ error: true })
+        }
+        else if (name.length > 3 & name.length < 10) {
+            this.setState({ errorname: '' });
+            this.setState({ error: false });
+        }
+        else {
+            this.setState({ errorname: 'Имя должно содержать от 4 до 10 символов' })
+            this.setState({ error: true })
+        }
+    }
+    // handler phone 2
     handlePhone2 = (e) => {
         let val = e.target.value;
-
-
         if (validator.isMobilePhone(val, ['ru-RU'])) {
             // Изменил state
             this.setState({
                 isValidPhone: true,
-                errorphonenumber: ''
+                error: false,
+                errorphonenumber: '',
             });
         } else {
             this.setState({ errorphonenumber: 'Телефон в формате 8 900 300 20 20' })
         }
     }
-
-
-
+    // handler phone 1
     handlePhone = (e) => {
-
         if (!/\d/.test(e.key)) {
             e.preventDefault();
         }
     }
-
+    // handler Submit
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(e.target.form.name.value);
+        console.log(e.target.form.telefon.value);
+        console.log(e.target.form.date.value);
+        console.log(e.target.form.time.value);
+        console.log(e.target.form.textarea.value);
+    }
 
     render() {
         let style = {
@@ -58,8 +83,8 @@ class Write extends Component {
                             <div className="form-row">
                                 <div className="form-group col-sm-12">
                                     <label htmlFor='name'>Ваше имя</label>
-                                    <input type="text" id="name" className="form-control" name="name" placeholder="Иван Иванович" />
-                                    <div className="error-box"></div>
+                                    <input type="text" id="name" className="form-control" name="name" placeholder="" onKeyDown={this.handleName2} onChange={this.handleCheckname} />
+                                    <div className="error-box">{this.state.errorname}</div>
                                 </div>
                                 <div className="form-group   col-sm-12  ">
                                     <label htmlFor='phone'>Ваш телефон:</label>
@@ -87,12 +112,12 @@ class Write extends Component {
                                 </div>
                                 <div className="form-group col-sm-12">
                                     <label htmlFor='uslugi'>Какие услуги вас интересуют</label>
-                                    <textarea id='areatext' className="form-control" rows="3" onChange={this.handleChangeTextArea} />
+                                    <textarea id='areatext' className="form-control" rows="3" name="textarea" />
 
                                     <div className="error-box"></div>
                                 </div>
                             </div>
-                            <input id="Otpravit" type="submit" className="btn btn-primary" defaultValue='Send' />
+                            <input id="Otpravit" type="submit" className="btn btn-primary" onClick={this.handleSubmit} />
                         </form>
                     </div>
                     <div className="overlay" onClick={this.props.closeWindow}></div>
@@ -100,7 +125,7 @@ class Write extends Component {
                 <div className="modal_ok">
                     <div className="message_ok" >
                         <div id="message_text">Форма успешно отправлена<br />В ближайшее время<br />мы свяжемся с вами!</div><br />
-                        <button id="uspeshnaya_otpravka" className="btn btn-primary" type="button">Ок</button>
+                        <button id="uspeshnaya_otpravka" className="btn btn-primary" type="button" >Ок</button>
                     </div>
                 </div>
 

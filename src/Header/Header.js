@@ -19,7 +19,7 @@ class Header extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="menu col-12 col-md-8 col-lg-9 " >
-                                <a href="Price.php"> Цены</a> |
+                                <a href="/Priselist"> Цены</a> |
                                   <a href="otzyvy.php"> Отзывы</a> |
                                     <a href="https://www.instagram.com/elenavitikh/" target="_blank">Мы в Инстаграмм</a>
                             </div>
