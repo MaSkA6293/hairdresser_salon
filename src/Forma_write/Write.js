@@ -9,33 +9,35 @@ class Write extends Component {
             phonenumber: '',
             showform: 'block',
             timevalue: '09:00',
-            error: true,
+            Flagerror1: true,
+            Flagerror2: true,
         }
     }
     // handler time write
     handleChange = (e) => {
         this.setState({ timevalue: e.target.value });
     }
-    //handler name 2
+    //handler name 2 Разрешено вводить только буквы
     handleName2 = (e) => {
-
-        console.log(e);
-        console.log(e.keyCode);
+        var Reg6 = new RegExp("^[A-zА-яЁё]+$");
+        if (!Reg6.test(e.key)) {
+            e.preventDefault();
+        }
     }
     //handler name
     handleCheckname = (e) => {
         let name = e.target.value;
         if (!name) {
             this.setState({ errorname: 'Введите ваше имя' });
-            this.setState({ error: true })
+            this.setState({ Flagerror1: true })
         }
         else if (name.length > 3 & name.length < 10) {
             this.setState({ errorname: '' });
-            this.setState({ error: false });
+            this.setState({ Flagerror1: false });
         }
         else {
             this.setState({ errorname: 'Имя должно содержать от 4 до 10 символов' })
-            this.setState({ error: true })
+            this.setState({ Flagerror1: true })
         }
     }
     // handler phone 2
@@ -45,14 +47,17 @@ class Write extends Component {
             // Изменил state
             this.setState({
                 isValidPhone: true,
-                error: false,
+                Flagerror2: false,
                 errorphonenumber: '',
             });
         } else {
-            this.setState({ errorphonenumber: 'Телефон в формате 8 900 300 20 20' })
+            this.setState({
+                errorphonenumber: 'Телефон в формате 8 900 300 20 20',
+                Flagerror2: true
+            })
         }
     }
-    // handler phone 1
+    // handler phone 1 ввод только цифр
     handlePhone = (e) => {
         if (!/\d/.test(e.key)) {
             e.preventDefault();
@@ -60,14 +65,26 @@ class Write extends Component {
     }
     // handler Submit
     handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(e.target.form.name.value);
-        console.log(e.target.form.telefon.value);
-        console.log(e.target.form.date.value);
-        console.log(e.target.form.time.value);
-        console.log(e.target.form.textarea.value);
+        if (!this.state.Flagerror1 & !this.state.Flagerror2) {
+            e.preventDefault();
+            console.log(e.target.form.name.value);
+            console.log(e.target.form.telefon.value);
+            console.log(e.target.form.date.value);
+            console.log(e.target.form.time.value);
+            console.log(e.target.form.textarea.value);
+        }
+        else {
+            e.preventDefault();
+            if (this.state.Flagerror1) {
+                this.setState({ errorname: 'Имя должно содержать от 4 до 10 символов' })
+            }
+            else if (this.state.Flagerror2) {
+                this.setState({
+                    errorphonenumber: 'Телефон в формате 8 900 300 20 20'
+                })
+            }
+        }
     }
-
     render() {
         let style = {
             display: this.props.stateform,
