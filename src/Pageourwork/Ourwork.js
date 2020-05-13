@@ -38,7 +38,7 @@ const Pageourwork = () => {
 
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Салон красоты Елена</title>
+                <title>Наши работы</title>
                 <meta name="description"
                     content="Салон красоты Елена. Наши работы." />
                 <meta name="Keywords"

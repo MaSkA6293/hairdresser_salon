@@ -7,7 +7,7 @@ const Pagepriselist = () => {
         <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Салон красоты Елена</title>
+                <title>Наш прайс лист</title>
                 <meta name="description"
                     content="Салон красоты Елена. Прайс лист на услуги." />
                 <meta name="Keywords"

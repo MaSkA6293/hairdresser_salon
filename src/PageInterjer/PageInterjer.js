@@ -37,7 +37,7 @@ const PageInterjer = () => {
         <div className="slider">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Салон красоты Елена</title>
+                <title>Наш интерьер</title>
                 <meta name="description"
                     content="Салон красоты Елена. Наш интерьер." />
                 <meta name="Keywords"

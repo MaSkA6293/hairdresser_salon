@@ -28,7 +28,7 @@ const Action = () => {
         <div className="slider">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Салон красоты Елена</title>
+                <title>Акции</title>
                 <meta name="description"
                     content="Акции салона красоты Елена" />
                 <meta name="Keywords"
